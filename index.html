@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=., initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <main>
+    <div class="slider-container">
+      <div class="my-slide">
+        <div class="slide-num">1 / 4</div>
+        <img src="images/img4.jpg" alt="" width="400">
+        <div class="caption">caption text</div>
+      </div>
+      <div class="my-slide fade">
+        <div class="slide-num">2 / 4</div>
+        <img src="images/img1.jpg" alt="" width="400">
+        <div class="caption">caption text</div>
+      </div>
+      <div class="my-slide fade">
+        <div class="slide-num">3/4</div>
+        <img src="images/img2.jpg" alt="" width="400">
+        <div class="caption">caption text</div>
+      </div>
+      <div class="my-slide fade">
+        <div class="slide-num">4/4</div>
+        <img src="images/img3.jpg" alt="" width="400">
+        <div class="caption">caption text</div>
+      </div>
+            
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      <ul class="pagination">
+        <li class="dot" onclick="currentSlide(1)"></li>
+        <li class="dot" onclick="currentSlide(2)"></li>
+        <li class="dot" onclick="currentSlide(3)"></li>
+        <li class="dot" onclick="currentSlide(4)"></li>
+      </ul>
+    
+    </div>
+  </main>
+</body>
+</html>
+<!-- 
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+ -->
